@@ -29,6 +29,12 @@
   {0.5em}                      % Spacing between number and title
   {}                         % Code before the title
 
+\titleformat{\subsection}  % Command to format subsections
+  {\normalfont\bfseries\fontsize{9}{10}\selectfont}  % Font size and style for subsection titles
+  {\thesubsection}          % Subsection number format
+  {0.5em}                   % Spacing between number and title
+  {}                        % Code before the title
+
 % Tags for the mat expressions, use [] instead
 \newtagform{brackets}{[}{]}
 \usetagform{brackets}
@@ -91,4 +97,30 @@ The persistent nature of stress during this period has contributed to a rise in 
 The intersection of COVID-19 with mental health issues like depression, anxiety, and stress highlights the need for psychological resilience.
 While the pandemic has undeniably worsened global mental health, optimism has proven to be a key factor in mitigating its effects. Further research into 
 how optimism influences mental health could offer valuable strategies to strengthen resilience and better equip individuals to cope with the ongoing challenges posed by global crises.
+
+
+\vspace{2em}
+\section{METHODS}
+\subsection{Theoretical Framework}
+\vspace{0.5em}
+This was a descriptive observational study utilizing an existing dataset of 193 COVID-19 survivors.
+The dataset included a range of demographic, behavioral, and psychological variables collected retrospectively following participants' discharge from the hospital.
+The primary objective of the study was to investigate the relationship between psychological factors—depression, anxiety, stress, and optimism—and COVID-19 test outcomes.
+
+\vspace{1em}
+\subsection{Research Methodology}
+\vspace{0.5em}
+Descriptive statistics were calculated to summarize the dataset, providing measures of central tendency such as mean and median, and variability, including standard deviation and interquartile range.
+Normality tests, specifically Shapiro-Wilk tests, were performed to evaluate the distribution of the psychological variables. This assessment determined the appropriateness of parametric versus non-parametric statistical analyses.
+\\
+Correlation analyses were conducted using Spearman's rank correlation coefficient to explore relationships among depression, anxiety, stress, and optimism, particularly due to deviations from normality. Mann-Whitney U tests were used to assess group differences in psychological variables between participants who tested positive for COVID-19 and those who did not. These non-parametric tests were selected due to the nature of the data and its distribution.
+
+\vspace{1em}
+\subsection{Statistical Analysis}
+\vspace{0.5em}
+The analysis of the dataset in relation to the psychological factors—stress, anxiety, depression, and optimism—reveals interesting insights into their potential influence on COVID-19 test status. The Spearman correlation results suggest significant associations between various psychological variables, but the relationship with COVID-19 status is relatively weak, especially when considering the null hypothesis that psychological factors do not influence the likelihood of testing positive or negative for COVID-19.\newline
+Starting with the psychological variables, stress is significantly correlated with both anxiety and depression (r = 0.774, p < 0.001 and r = 0.807, p < 0.001, respectively). This indicates that individuals experiencing higher levels of stress are more likely to report higher levels of anxiety and depression. Additionally, optimism shows negative correlations with stress, anxiety, and depression (r = -0.375, r = -0.392, and r = -0.496, respectively), suggesting that individuals with lower levels of optimism tend to experience higher levels of stress, anxiety, and depression. These correlations, however, are not entirely surprising given the established links between these psychological factors in the broader literature.
+When considering the influence of these psychological factors on COVID-19 test results, the correlations with the variable Tested positive for Covid are relatively weak. Stress shows a small negative correlation (r = -0.148, p = 0.041), which suggests a very modest inverse relationship between stress levels and testing positive for COVID-19. However, this correlation is far from strong and does not provide evidence to support a significant psychological influence on COVID-19 status. Similarly, anxiety (r = -0.108, p = 0.134) and depression (r = -0.201, p = 0.005) also show weak negative correlations with COVID-19 test results, indicating that higher levels of anxiety and depression may be slightly more common in individuals who test negative, though these relationships are still modest in size. On the other hand, optimism is positively correlated with testing positive for COVID-19 (r = 0.237, p < 0.001), suggesting a small but significant relationship between higher optimism and a higher likelihood of testing positive for the virus. This finding may point to an interesting, albeit small, trend, but it does not imply causation.
+Therefore, while significant correlations between psychological variables themselves exist, the relationship between these variables and the likelihood of testing positive for COVID-19 remains weak. The correlation between optimism and testing positive for COVID-19 is the only significant finding, although it is small in magnitude. This analysis suggests that while psychological factors are undeniably interconnected, their influence on COVID-19 test outcomes is minimal, supporting the null hypothesis that stress, anxiety, depression, and optimism do not significantly affect the likelihood of testing positive for the virus.
+
 \end{document}
