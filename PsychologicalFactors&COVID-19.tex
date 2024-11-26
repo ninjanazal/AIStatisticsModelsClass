@@ -3,7 +3,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage{geometry}
 
-
+\usepackage{float}
 \usepackage{graphicx}
 \usepackage{lipsum} 
 \usepackage{xcolor} 
@@ -147,13 +147,14 @@ By combining descriptive analysis, normality testing, correlation analysis, and 
 \vspace{0.5em}
 The analysis of the dataset in relation to the psychological factors—stress, anxiety, depression, and optimism—reveals interesting insights into their potential influence on COVID-19 test status.
 The Spearman correlation results suggest significant associations between various psychological variables, but the relationship with COVID-19 status is relatively weak,
-especially when considering the null hypothesis that psychological factors do not influence the likelihood of testing positive or negative for COVID-19.
+especially when considering the null hypothesis that psychological factors are unrelated to having tested positive or negative for COVID-19.
 \vspace{0.5em}\newline
-The descriptive statistics reveal key insights into the sample \textit{(Figure \ref{fig:descriptiveSts})}. The mean stress level is 5.40 with moderate variability, and the distribution is slightly right-skewed.\newline
-Anxiety, with a mean of 2.85, shows a highly right-skewed distribution and a heavy peak, indicating most participants reported low anxiety but some had very high levels.\newline
-Depression, with a mean of 4.77, also shows a right-skewed distribution but less extreme than anxiety.\newline
-Optimism has a mean of 19.52 and a nearly normal distribution, suggesting consistent optimism levels among participants..\newline
-For gender, the mean is 0.65, indicating that 65\% of participants are likely female. The mean age is 29.15 years, with a slight right skew, reflecting a younger sample.
+The descriptive statistics reveal key insights into the sample \textit{(Figure \ref{fig:descriptiveSts})}. 
+The mean stress level is 5.40, with moderate variability and a slightly right-skewed distribution. Anxiety, with a mean of 2.85, exhibits a highly right-skewed distribution and a pronounced peak,
+indicating that while most participants reported low anxiety, a few experienced very high levels.
+Depression, with a mean of 4.77, also shows a right-skewed distribution, though less pronounced than anxiety.
+In contrast, optimism has a mean of 19.52 and a nearly normal distribution, suggesting relatively consistent levels of optimism among participants.\newline
+The mean age is 29.15 years, with a slight right skew, reflecting a younger sample.
 Only 28\% of participants tested positive for COVID-19, with a skewed distribution toward negative cases.\newline
 In summary, while stress, anxiety, and depression show moderate variability with skewed distributions, optimism appears more consistent and normally distributed. 
 The sample is primarily younger and mostly tested negative for COVID-19. These characteristics will help guide further analysis of psychological factors and COVID-19 test status.
@@ -167,24 +168,22 @@ The sample is primarily younger and mostly tested negative for COVID-19. These c
   \includegraphics[width=\textwidth]{img/descriptive_statistics.png}  % Adjust the file name and extension as necessary
 \end{figure}
 
-\vspace{3em}\noindent
-
+\vspace{3em}
+\noindent
 The normality test results assess whether the distributions of stress, anxiety, depression, and optimism are normally distributed,
 separately for participants who tested positive and those who tested negative for COVID-19.
-Two tests were applied: the Kolmogorov-Smirnov test \textit{(Figure \ref{fig:normalityTest})}.
+The Kolmogorov-Smirnov test is used to assess whether a sample distribution differs significantly from a reference distribution,
+particularly for larger sample sizes (typically more than 50) to ensure reliable results. \textit{(Figure \ref{fig:normalityTest})}.
 \vspace{0.5em}\newline
-For stress, the results of both tests show significant p-values \(\boldsymbol{(all p<0.001)}\) for participants who tested both positive and negative for COVID-19, indicating that stress scores deviate significantly from normality in both groups.\newline
-Similarly, anxiety scores show significant deviations from normality for both groups, with \(\boldsymbol{p<0.001}\) across both tests, indicating a non-normal distribution.\newline
-Depression scores also fail the normality tests for both groups, as evidenced by \(\boldsymbol{p<0.001}\) for all comparisons.\newline
-This suggests that depression scores are not normally distributed regardless of COVID-19 status.
-Optimism, however, shows a difference in normality between groups. Suggesting no significant deviation from normality, though the Kolmogorov-Smirnov test shows significance (\(\boldsymbol{p=0.005}\)).
-\vspace{0.5em}\newline
-In contrast, for participants who tested positive for COVID-19, optimism scores are non-significant in the Kolmogorov-Smirnov test (\(\boldsymbol{p=0.200}\)), indicating no significant deviation from normality.
-Overall, the normality tests reveal that stress, anxiety, and depression scores deviate significantly from a normal distribution across groups,
-while optimism appears closer to normal, particularly for participants who tested positive for COVID-19. These findings justify the use of non-parametric statistical methods, such as Spearman correlations and Mann-Whitney U tests, for further analysis.
+The Kolmogorov-Smirnov test results reveal significant deviations from normality for all variables in the sample,
+with p-values less than \(\boldsymbol{0.001}\) for stress, anxiety, depression, optimism, and COVID-19 test status.
+These findings confirm that none of the variables follow a normal distribution, supporting the use of non-parametric statistical methods,
+such as Spearman correlations and Mann-Whitney U tests, for further analysis.
 \vspace{1.5em}
 
-\begin{figure}[ht]
+\newpage
+
+\begin{figure}[H]
   \centering
   \caption{Normality Tests}
   \label{fig:normalityTest}
@@ -227,21 +226,18 @@ depression, and optimism do \textbf{not significantly affect} the likelihood of 
 \end{figure}
 
 \vspace{3em}\noindent
-The Mann-Whitney U test \textit{(Figure \ref{fig:mannWhitney})} evaluates differences between participants who tested positive for COVID-19 and those who tested negative. This non-parametric test is appropriate as the data do not meet the assumptions of normality.
-\vspace{0.5em}\newline
-For stress, the Mann-Whitney U statistic is 3082.000, with a Z value of -2.045 and a p-value of 0.041. This indicates a statistically significant difference between groups at the \(\boldsymbol{\alpha =0.05}\) level,
+The Mann-Whitney U test \textit{(Figure \ref{fig:mannWhitney})} evaluates differences between participants who tested positive for COVID-19 and those who tested negative.
+This non-parametric test is appropriate as the data do not meet the assumptions of normality.\newline
+For stress, the p-value is 0.041, indicating a statistically significant difference between groups at the \(\boldsymbol{\alpha = 0.05}\) level,
 suggesting that participants who tested negative for COVID-19 report slightly higher stress levels.
+Anxiety, however, shows no significant difference, with a p-value of \(\boldsymbol{0.133}\), indicating no meaningful variation between the two groups.
+Depression has a p-value of \(\boldsymbol{0.005}\), revealing a statistically significant difference, suggesting that participants who tested negative for COVID-19 experience higher levels of depression.
+Optimism, with a p-value of 0.001, also shows a significant difference, with participants who tested positive for COVID-19 reporting higher levels of optimism.
 \vspace{0.5em}\newline
-Anxiety, however, shows no significant difference, with a Mann-Whitney U statistic of \textbf{3279.500}, a Z value of \textbf{-1.501}, and a p-value of \textbf{0.133}, indicating no meaningful variation between the two groups.
-Depression presents a Mann-Whitney U statistic of \textbf{2825.000}, a Z value of \textbf{-2.788}, and a p-value of \textbf{0.005}, revealing a statistically significant difference.
-This suggests that participants who tested negative for COVID-19 experience higher levels of depression.
-\vspace{0.5em}\newline
-Optimism, with a Mann-Whitney U statistic of \textbf{2648.500}, a Z value of \textbf{-3.288}, and a p-value of \textbf{0.001}, also shows a significant difference.
-Here, participants who tested positive for COVID-19 report higher levels of optimism.
-\vspace{0.5em}\newline
-In summary, while stress, depression, and optimism show significant differences between groups, the effect sizes appear modest. Anxiety does not differ significantly between those who tested positive and negative for COVID-19.
+In summary, while stress, depression, and optimism show significant differences between groups, the effect sizes appear modest.
+Anxiety does not differ significantly between those who tested positive and negative for COVID-19.
 
-\begin{figure}[ht]
+\begin{figure}[H]
   \centering
   \caption{Mann-Whitney U Test}
   \label{fig:mannWhitney}
